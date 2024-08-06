@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexcell - Your One-Stop Shop for Mobile Accessories</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header, nav, footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        .container {
+            padding: 20px;
+        }
+        .products, .contact, .chatbot {
+            margin: 20px 0;
+        }
+        .product {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: center;
+            width: 200px;
+        }
+        .product img {
+            max-width: 100%;
+            height: auto;
+        }
+        .chatbot {
+            background-color: #ddd;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Nexcell</h1>
+    </header>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#products">Products</a>
+        <a href="#contact">Contact</a>
+        <a href="#chatbot">Chatbot</a>
+    </nav>
+    <div class="container">
+        <section id="about">
+            <h2>Welcome to Nexcell</h2>
+            <p>Your one-stop shop for the best mobile accessories!</p>
+        </section>
+
+        <section id="products">
+            <h2>Our Products</h2>
+            <div class="product">
+                <img src="https://images.app.goo.gl/rviZmGJ4ZQjmsf3S6" alt="Car Mount">
+                <h3>Car Mount</h3>
+                <p>$20.00</p>
+                <p>Easy One Touch Mechanism: One-handed phone mounting and removal with auto-locking arms.<br>
+                   Wide Compatibility: Fits all smartphones and cases.<br>
+                   Cord Organizer: Built-in system for neat cable management.<br>
+                   Logo: Customized one color printed design<br>
+                   Adjustable Bottom Foot: Secure fit for any smartphone size.</p>
+            </div>
+            <div class="product">
+                <img src="https://images.app.goo.gl/tn9RrjU81qULZF4k7" alt="Phone Stand">
+                <h3>Phone Stand</h3>
+                <p>$9.99</p>
+                <p>Private Mold: No<br>
+                   Smart Tracking: None<br>
+                   Fix Mode: Magnetic<br>
+                   Compatible Model: Gym magnetic phone holder<br>
+                   Keywords: Magnetic phone mount gym<br>
+                   Quality: Tested<br>
+                   Fit: 100% Perfect Fit<br>
+                   Sample: Inventory supply<br>
+                   Package: Opp bag, retail box, or custom packaging<br>
+                   OEM/ODM: Warmly welcomed<br>
+                   Delivery Time: 7-15 days</p>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" rows="4" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+
+        <section id="chatbot" class="chatbot">
+            <h3>Chat with our AI Bot</h3>
+            <input type="text" id="chat-input" placeholder="Type your message here...">
+            <button onclick="sendMessage()">Send</button>
+            <div id="chat-output"></div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Nexcell. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function sendMessage() {
+            const input = document.getElementById('chat-input').value;
+            const output = document.getElementById('chat-output');
+            const response = 'Thank you for your message. We will get back to you soon.';
+            
+            const userMessage = document.createElement('p');
+            userMessage.textContent = 'You: ' + input;
+            output.appendChild(userMessage);
+
+            const botMessage = document.createElement('p');
+            botMessage.textContent = 'Bot: ' + response;
+            output.appendChild(botMessage);
+
+            document.getElementById('chat-input').value = '';
+        }
+    </script>
+</body>
+</html>
